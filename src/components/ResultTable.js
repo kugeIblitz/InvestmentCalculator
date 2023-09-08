@@ -1,7 +1,4 @@
-import {useState} from'react';
-
 function ResultTable(userInput) {
-
   const yearlyData = [];
 
   let currentSavings = +userInput.currentSavings; // feel free to change the shape of this input object!
@@ -20,11 +17,8 @@ function ResultTable(userInput) {
     });
   }
 
-  function reset() {
-  }
-
   return (
-    <table className="result">
+    <table className='result'>
       <thead>
         <tr>
           <th>Year</th>
@@ -41,7 +35,7 @@ function ResultTable(userInput) {
             <td>{data.savingsEndOfYear}</td>
             <td>{data.yearlyInterest}</td>
             <td>{data.yearlyContribution}</td>
-            <td>{}</td>
+            <td>{data.yearlyContribution * data.year}</td>
           </tr>
         ))}
       </tbody>
